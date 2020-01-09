@@ -16,7 +16,6 @@
         <module>account</module>
         <module>storage</module>
         <module>order</module>
-        <module>eureka</module>
     </modules>
     <dependencyManagement>
         <dependencies>
