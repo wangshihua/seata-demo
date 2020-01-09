@@ -15,6 +15,7 @@ public class StorageService {
     private JdbcTemplate jdbcTemplate;
 
     public void deduct(String commodityCode, int count) {
+//        int i = 10/0;
         jdbcTemplate.update("update storage_tbl set count = count - ? where commodity_code = ?",
             new Object[] {count, commodityCode});
     }

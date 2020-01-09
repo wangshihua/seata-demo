@@ -23,7 +23,6 @@ public class OrderService {
         int orderMoney = count * 100;
         jdbcTemplate.update("insert order_tbl(user_id,commodity_code,count,money) values(?,?,?,?)",
             new Object[] {userId, commodityCode, count, orderMoney});
-
         userFeignClient.reduce(userId, orderMoney);
 
     }
